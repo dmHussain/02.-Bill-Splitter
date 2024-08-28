@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bill Splitter</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body class="flex justify-center gap-2">
+    <div class="bill-entry-container w-96 h-96 mt-16 text-black px-3 py-4">
+      <h1 class="font-serif text-2xl mb-2 text-purple-600">Bill</h1>
+      <div class="flex bg-white p-2 border border-solid border-gray-700">
+        <span class="px-2 text-lg text-purple-600">₹</span>
+        <input
+          id="bill-input-box"
+          type="number"
+          class="w-full text-purple-700 text-lg font-bold outline-none"
+          autocomplete="off"
+        />
+      </div>
+
+      <h1 class="text-purple-600 text-2xl mt-2 mb-2">Select Tip</h1>
+      <div
+        class="tip-card-box flex w-full flex-wrap gap-3 justify-between mb-2"
+      >
+        <button
+          disabled
+          id="tipBtn5"
+          class="disable px-8 py-2 text-white font-bold bg-purple-600 rounded-md"
+          onclick="tipUpdate(5, this)"
+        >
+          05%
+        </button>
+        <button
+          disabled
+          id="tipBtn10"
+          class="disable px-8 py-2 text-white font-bold bg-purple-600 rounded-md"
+          onclick="tipUpdate(10, this)"
+        >
+          10%
+        </button>
+        <button
+          disabled
+          id="tipBtn15"
+          class="disable px-8 py-2 text-white font-bold bg-purple-600 rounded-md"
+          onclick="tipUpdate(15, this)"
+        >
+          15%
+        </button>
+        <button
+          disabled
+          id="tipBtn25"
+          class="disable px-8 py-2 text-white font-bold bg-purple-600 rounded-md"
+          onclick="tipUpdate(25, this)"
+        >
+          25%
+        </button>
+        <button
+          disabled
+          id="tipBtn50"
+          class="disable px-8 py-2 text-white font-bold bg-purple-600 rounded-md"
+          onclick="tipUpdate(50, this)"
+        >
+          50%
+        </button>
+        <button
+          disabled
+          id="tipBtn75"
+          class="disable px-8 py-2 text-white font-bold bg-purple-600 rounded-md"
+          onclick="tipUpdate(75, this)"
+        >
+          75%
+        </button>
+      </div>
+
+      <input
+        disabled
+        class="disable w-full p-2 outline-none text-lg"
+        min="0"
+        type="number"
+        id="tip-input"
+        placeholder="Custom Tip in Percentage "
+        autocomplete="off"
+      />
+      <h1 class="text-purple-600 text-2xl">Number of People</h1>
+      <input
+        disabled
+        class="disable w-full p-2 outline-none text-lg"
+        type="number"
+        id="people-input"
+        placeholder=" Number of people"
+        min="1"
+        autocomplete="off"
+      />
+
+      <button
+        disabled
+        id="submit-btn"
+        class="disable w-full text-white p-2 bg-purple-700 rounded-md mt-4"
+      >
+        Generate Bill
+      </button>
+    </div>
+
+    <!-- *******************Bill Print******************* -->
+
+    <div
+      class="bill-box text-white text-lg font-semibold bg-blue-950 w-96 h-86 rounded-lg mt-28 px-8 py-4"
+    >
+      <p id="tip-amount" class="mb-10 mt-5 flex justify-between">
+        Tip amount <span class="font-bold text-2xl"></span>
+      </p>
+      <p id="total-amount" class="mb-10 flex justify-between">
+        Total <span class="font-bold text-2xl"></span>
+      </p>
+      <p id="divided-bill" class="mb-10 flex justify-between">
+        Each Person Bill <span class="font-bold text-2xl"></span>
+      </p>
+      <button
+        disabled
+        id="reset"
+        class="disable bg-white text-black font-semibold w-full py-2 rounded-lg"
+      >
+        Reset
+      </button>
+    </div>
+  </body>
+</html>

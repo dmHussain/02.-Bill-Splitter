@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+.disable {
+  opacity: 65%;
+  cursor: not-allowed !important;
+  
+}
+
+.btnSelect {
+  border: 2px solid yellow;
+}
+
+.btnDeselect {
+  outline: none;  
+}
